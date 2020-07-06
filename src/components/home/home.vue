@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="home">
     <h1 class="centralizado" v-meu-transform:scale.animate="1.2">{{ titulo }}</h1>
     <p class="centralizado" v-show="mensagem">{{ mensagem }}</p>
     <input type="search" class="filtro" @input="filtro = $event.target.value" placeholder="filtre pelo título da foto">
@@ -17,18 +17,20 @@
 
 <script>
   
-  import Painel from '../shared/painel/painel.vue'
-  import imagemResponsiva from '../shared/imagem-responsiva/imagemResponsiva.vue'
-  import Botao from '../shared/botao/botao.vue'
+  import Painel from '../shared/painel/Painel'
+  import ImagemResponsiva from '../shared/imagem-responsiva/ImagemResponsiva'
+  import Botao from '../shared/botao/Botao'
   import Transform from '../../directives/transform.js'
   import FotoService from '../../domain/foto/fotoService.js'
 
   export default {
 
+    name: 'home',
+
     components: {
       
       'meu-painel': Painel,
-      'imagem-responsiva': imagemResponsiva,
+      'imagem-responsiva': ImagemResponsiva,
       'meu-botao': Botao
 
     },

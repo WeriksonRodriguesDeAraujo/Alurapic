@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="cadastro">
     <h1 class="centralizado">Cadastro</h1>
     <h1 v-if='foto._id' class="centralizado">Alteração</h1>
     <h1 v-else class="centralizado">Inclusão</h1>
@@ -33,12 +33,14 @@
 
 <script>
 
-import ImagemResponsiva from '../shared/imagem-responsiva/imagemResponsiva.vue';
-import Botao from '../shared/botao/botao.vue';
+import ImagemResponsiva from '../shared/imagem-responsiva/ImagemResponsiva';
+import Botao from '../shared/botao/Botao';
 import Foto from '../../domain/foto/foto.js'
 import FotoService from '../../domain/foto/fotoService.js'
 
 export default {
+
+  name: 'cadastro',
 
   components: {
 
@@ -83,6 +85,7 @@ export default {
 }
 
 </script>
+
 <style scoped>
 
   .centralizado {

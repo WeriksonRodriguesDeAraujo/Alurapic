@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav id="menu">
       <ul>       
           <li v-for="rota in rotas">
             <router-link :to="rota.path ? rota.path : '/'">{{rota.titulo}}</router-link>
@@ -11,6 +11,8 @@
 <script>
 export default {
 
+    name: 'menu',
+    
     props: {
         rotas: {
             type: Array, 
